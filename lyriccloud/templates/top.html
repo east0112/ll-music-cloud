@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LoveLive! WordCloud for Music</title>
+  <!--<script src="{{url_for('static', filename='lyriccloud.js')}}"></script>-->
+  <script src="./static/lyriccloud.js"></script>
+</head>
+<body>
+<form method="post" action"/">
+  <input id="checkGroup" type="checkbox" name="group[]" value="1" onchange="changeGroup()">μ's
+  <input id="checkGroup" type="checkbox" name="group[]" value="1" onchange="changeGroup()">Aqours
+  <input id="checkGroup" type="checkbox" name="group[]" value="1" onchange="changeGroup()">虹ヶ咲学園スクールアイドル同好会
+</br>
+  <form method="post" action"/">
+    <button name="post_exec" value="exec">実行</button>
+  </form>
+</form>
+</body>
+</html>
