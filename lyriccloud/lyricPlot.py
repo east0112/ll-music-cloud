@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 from flask import Flask, make_response
 from urllib import parse
 from common import GetConfig
+from db import PostgreDAO
 
 class Plot:
     #入力の条件を基に、ワードクラウドを生成する。
@@ -26,8 +27,10 @@ class Plot:
         canvas.print_png(buf)
         data = buf.getvalue()
 
-        #実験用
-        afafa = GetConfig.get_config('DataBaseConfig','SQL_DATABASE_USER')
+        #試験用
+        with PostgreDAO.get_connection():
+        #    rows = PostgresDAO.select_data()
+            afafa = ''
         #base64エンコードしてhtmlに引き渡す
         responce = parse.quote(data)
         return responce

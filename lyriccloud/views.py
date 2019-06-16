@@ -14,6 +14,7 @@ def page_open():
         unitM = request.form.getlist('unitM')
         unitA = request.form.getlist('unitA')
         img_data = Plot.get_pic()
+
         return render_template('top.html',group=group,unitM=unitM,unitA=unitA,img_data=img_data)
 
     if request.method == 'GET':
