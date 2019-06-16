@@ -12,7 +12,7 @@ from janome.tokenizer import Tokenizer
 class Plot:
     #入力の条件を基に、ワードクラウドを生成する。
     #base64でエンコードして画像情報をフロントへ返す
-    def get_pic(group,unitM,unitA):
+    def get_pic(group,unit):
         import matplotlib.pyplot as plt
         from matplotlib.backends.backend_agg import FigureCanvasAgg
         import io
@@ -30,9 +30,22 @@ class Plot:
             #最後の文字を削除する
             group_sql = group_sql[:-1]
             #WHERE句に条件を追加する
-            get_sql = get_sql + 'AND "groupId" in ({0})'
+            get_sql = get_sql + ' AND "groupId" in ({0})'
             #取得SQLへセットする
             get_sql =get_sql.format(group_sql)
+
+        #ユニットの条件判定
+        unit_sql = ''
+        for uni in unit:
+            if uni:
+                unit_sql =unit_sql + uni +','
+        if unit_sql:
+            #最後の文字を削除する
+            unit_sql = unit_sql[:-1]
+            #WHERE句に条件を追加する
+            get_sql = get_sql + ' AND "unitId" in ({0})'
+            #取得SQLへセットする
+            get_sql =get_sql.format(unit_sql)
 
         #デバッグ用
         app = Flask(__name__)
@@ -68,7 +81,7 @@ class Plot:
                     output.append(token.surface)
             text= " ".join(output)
 
-            wordCloud = WordCloud(background_color="white",font_path=fpath, width=900, height=500, stopwords=set(stop_words)).generate(text)
+            wordCloud = WordCloud(background_color="white",font_path=fpath, width=900, height=500, colormap='rainbow',stopwords=set(stop_words)).generate(text)
 
             fig = plt.figure(figsize=(12,12))
             plt.imshow(wordCloud)
