@@ -13,4 +13,4 @@ app.register_blueprint(lyriccloud, url_prefix='/lyriccloud')
 #    return render_template('wordcloud\templates\index.html')
 
 #print(app.config['SQL_DATABASE_USER'])
-app.run(host="localhost")
+app.run(host="localhost",debug=True)
