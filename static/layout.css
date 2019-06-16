@@ -38,7 +38,7 @@ body{
   height: 5px
 }
 
-/*メインコンテンツ*/
+/*背景設定*/
 body {
   background-color: #FFFFFF;
   background-image: url("bg.png"); /*背景画像指定*/
@@ -48,10 +48,17 @@ body {
   background-repeat: no-repeat; /*背景画像の並び指定*/
 }
 
+/*メインコンテンツ*/
 .body-back {
   width: 1000;
   box-shadow:1px 1px 5px;
   border-radius: 5px;	/* ボックスの四つ角を丸くする */
   background-color: #FFFFFF;
+  margin:0 auto  /* 中央寄せ */
+}
+
+/*余白作成用*/
+.body-content{
+  width: 950;
   margin:0 auto  /* 中央寄せ */
 }

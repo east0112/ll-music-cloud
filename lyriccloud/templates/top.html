@@ -1,17 +1,14 @@
-<!--
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8" />
-<title>LoveLive! WordCloud for Music</title>
--->
 <script src="./static/lyriccloud.js"></script>
-<!--
-</head>
-<body>
--->
+<link rel="stylesheet" type="text/css" href="./static/lyriccloud.css" />
+
 {% extends "layout.html" %}
 {% block body %}
+</br>
+<div class="top-description">WordCloud for Lyric</div>
+<div class="main-description">
+  グループやユニットなど、指定された条件に合致する楽曲からワードクラウドを作成します。
+</div>
+</br>
 <form method="post" name ="termsCheck" action"/">
   <div id="checkGroup">
     <input type="checkbox" name="group" value="1" onchange="changeGroup()">μ's
@@ -39,8 +36,5 @@
 {% if img_data %}
 <img src="data:image/png:base64,{{ img_data }}"/>
 {% endif %}
+</br>
 {% endblock %}
-<!--
-</body>
-</html>
--->
