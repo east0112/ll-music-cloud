@@ -81,9 +81,9 @@ class Plot:
                     output.append(token.surface)
             text= " ".join(output)
 
-            wordCloud = WordCloud(background_color="white",font_path=fpath, width=900, height=700, colormap='rainbow',stopwords=set(stop_words)).generate(text)
+            wordCloud = WordCloud(background_color="white",font_path=fpath, width=800, height=700, colormap='rainbow',stopwords=set(stop_words)).generate(text)
 
-            fig = plt.figure(figsize=(10,8))
+            fig = plt.figure(figsize=(9,8))
             plt.imshow(wordCloud)
             plt.axis("off")
 

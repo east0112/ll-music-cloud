@@ -9,30 +9,68 @@
   グループやユニットなど、指定された条件に合致する楽曲からワードクラウドを作成します。
 </div>
 </br>
-<form method="post" name ="termsCheck" action"/">
-  <div id="checkGroup">
-    <input type="checkbox" name="group" value="1" onchange="changeGroup()">μ's
-    <input type="checkbox" name="group" value="2" onchange="changeGroup()">Aqours
-    <input type="checkbox" name="group" value="3" onchange="changeGroup()">虹ヶ咲学園スクールアイドル同好会
-  </div>
-  <!--<div id="checkYear">
-    <input type="checkbox" name="year" value="1" onchange="changeYear()">１年
-    <input type="checkbox" name="year" value="1" onchange="changeYear()">２年
-    <input type="checkbox" name="year" value="1" onchange="changeYear()">３年
-  </div>
-  -->
-  <div id="checkUnit1">
-      <input type="checkbox" name="unit" value="2" onchange="changeUnit()">Printemps
-      <input type="checkbox" name="unit" value="3" onchange="changeUnit()">lily white
-      <input type="checkbox" name="unit" value="4" onchange="changeUnit()">BiBi
-  </div>
-  <div id="checkUnit2">
-    <input type="checkbox" name="unit" value="7" onchange="changeUnit()">CYaRon!
-    <input type="checkbox" name="unit" value="8" onchange="changeUnit()">AZALEA
-    <input type="checkbox" name="unit" value="9" onchange="changeUnit()">Guilty Kiss
-  </div>
-  <button name="submit" value="submit">実行</button>
-</form>
+<div class="input-form">
+  <form method="post" name ="termsCheck" action"/">
+      <div id="checkGroup">
+        <div class="toggle-buttons">
+          <label>
+            <input type="checkbox" name="group" value="1" onchange="changeGroup()">
+            <span class="button">μ's</span>
+          </label>
+          <label>
+            <input type="checkbox" name="group" value="2" onchange="changeGroup()">
+            <span class="button">Aqours</span>
+          </label>
+          <label>
+            <input type="checkbox" name="group" value="3" onchange="changeGroup()">
+            <span class="button">虹ヶ咲</span>
+          </label>
+        </div>
+      </div>
+    <!--<div id="checkYear">
+      <input type="checkbox" name="year" value="1" onchange="changeYear()">１年
+      <input type="checkbox" name="year" value="1" onchange="changeYear()">２年
+      <input type="checkbox" name="year" value="1" onchange="changeYear()">３年
+    </div>
+    -->
+      <div id="checkUnit1">
+        </br>
+          <div class="toggle-buttons">
+          <label>
+            <input type="checkbox" name="unit" value="2" onchange="changeUnit()">
+            <span class="button">Printemps</span>
+          </label>
+          <label>
+            <input type="checkbox" name="unit" value="3" onchange="changeUnit()">
+            <span class="button">lily white</span>
+          </label>
+          <label>
+            <input type="checkbox" name="unit" value="4" onchange="changeUnit()">
+            <span class="button">BiBi</span>
+          </label>
+        </div>
+      </div>
+      <div id="checkUnit2">
+        </br>
+        <div class="toggle-buttons">
+          <label>
+            <input type="checkbox" name="unit" value="7" onchange="changeUnit()">
+            <span class="button">CYaRon!</span>
+          </label>
+          <label>
+            <input type="checkbox" name="unit" value="8" onchange="changeUnit()">
+            <span class="button">AZALEA</span>
+          </label>
+          <label>
+            <input type="checkbox" name="unit" value="9" onchange="changeUnit()">
+            <span class="button">Guilty Kiss</span>
+          </label>
+        </div>
+      </div>
+    </br>
+      <button class="button-submit" name="submit" value="submit">実行</button>
+  </form>
+</div>
 {% if img_data %}
 <img src="data:image/png:base64,{{ img_data }}"/>
 {% endif %}

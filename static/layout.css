@@ -26,6 +26,33 @@ body{
   font-family: 'Avenir','arial black',sans-serif;
 }
 
+.link-box{
+  float: right;
+  width: 130px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 45px;
+}
+
+.link-button {
+  position: relative;
+  display: inline-block;
+  /*padding: 0.25em 0.5em;*/
+  text-decoration: none;
+  color: #00BCD4;
+  transition: .4s; /*モーション時間*/
+  width: 130px;
+}
+
+.link-button:hover {
+  background: #CC0066;
+  color: white;
+}
+.title-box{
+  float: left;
+  clear:both; /*回り込み防止*/
+}
+
 /*ヘッダーリンク*/
 .hearder-link {
   display: inline-block;

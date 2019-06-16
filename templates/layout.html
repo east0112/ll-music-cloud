@@ -5,38 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{LoveLive! WordCloud for Music</title>
     <link rel="stylesheet" type="text/css" href="/static/layout.css" />
-<!--
-    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
-    <script src="/static/scripts/modernizr-2.6.2.js"></script>
--->
 </head>
 
 <body>
   <div class="site-header">
-      <a href="./" class="navbar-brand">LoveLive! WordCloud for Music</a>
+    <div class="title-box">
+      <a href="./">LoveLive! WordCloud for Music</a>
+    </div>
+    <div class="link-box">
+      <a href="./" class="link-button">
+        <i class="fa fa-caret-right"></i>歌詞
+      </a>
+    </div>
+    <div class="link-box">
+      <a href="./" class="link-button">
+        <i class="fa fa-caret-right"></i>作曲・編曲
+      </a>
+    </div>
+    <div class="link-box">
+      <a href="./" class="link-button">
+        <i class="fa fa-caret-right"></i>作詞
+      </a>
+    </div>
   </div>
-<!--
-    <div class="header-link">
-          <a href="">TOP</a></li>
-          <a href="">lyricMusic</a></li>
-    </div>
-    <div class="hearder-border">
-      <p></p>
-    </div>
--->
 <div class="hearder-border">
 </div>
 <div class="body-back">
     <div></div>
     <div class="body-content">
         {% block body %}{% endblock %}
-<!--
-        <hr />
-        <footer>
-            <p>LoveLive! WordCloud for Music</p>
-        </footer>
--->
     </div>
 </div>
 </body>
