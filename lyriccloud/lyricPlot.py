@@ -16,16 +16,9 @@ class Plot:
         import matplotlib.pyplot as plt
         from matplotlib.backends.backend_agg import FigureCanvasAgg
         import io
-        #import random
 
+        #戻り値
         data = ''
-
-        #fig, ax = matplotlib.pyplot.subplots()
-        #ax.set_title(u'IMINASHI GRAPH')
-        #x_ax = range(1, 284)
-        #y_ax = [x * random.randint(436, 875) for x in x_ax]
-        #ax.plot(x_ax, y_ax)
-
         #取得SQL文の作成
         get_sql = 'SELECT "musicName", "lyric" FROM "music" WHERE 1=1 '
         #グループの条件判定
@@ -60,7 +53,7 @@ class Plot:
                 count = count + 1
 
             #ワードクラウド化
-            fpath = ".irohamaru-Regular.ttf"
+            fpath = "irohamaru-Regular.ttf"
             # ストップワードの設定
             stop_words = [ u'てる', u'いる', u'なる', u'れる', u'する', u'ある', u'こと', u'これ', u'さん', u'して', \
              u'くれる', u'やる', u'くださる', u'そう', u'せる', u'した',  u'思う',  \
@@ -75,16 +68,12 @@ class Plot:
                     output.append(token.surface)
             text= " ".join(output)
 
-            #wordCloud = WordCloud(background_color="white",font_path=fpath, width=900, height=500, stopwords=set(stop_words)).generate(text)
-            wordCloud = WordCloud(background_color="white", width=900, height=500, stopwords=set(stop_words)).generate(text)
+            wordCloud = WordCloud(background_color="white",font_path=fpath, width=900, height=500, stopwords=set(stop_words)).generate(text)
 
             fig = plt.figure(figsize=(12,12))
             plt.imshow(wordCloud)
             plt.axis("off")
-            plt.savefig('figure.png')
 
-            #fig = plt.figure()
-            #canvas = FigureCanvasAgg(plt.subplots())
             canvas = FigureCanvasAgg(fig)
             buf = io.BytesIO()
             canvas.print_png(buf)
