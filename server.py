@@ -2,6 +2,7 @@ from flask import Flask
 
 # Flask の起動
 app = Flask(__name__)
+app.config.from_object("config.DataBaseConfig")
 
 from lyriccloud.views import lyriccloud
 app.register_blueprint(lyriccloud, url_prefix='/lyriccloud')
@@ -11,4 +12,5 @@ app.register_blueprint(lyriccloud, url_prefix='/lyriccloud')
 #def index():
 #    return render_template('wordcloud\templates\index.html')
 
+#print(app.config['SQL_DATABASE_USER'])
 app.run(host="localhost")
