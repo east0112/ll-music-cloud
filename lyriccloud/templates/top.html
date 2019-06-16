@@ -30,5 +30,8 @@
   </div>
   <button name="submit" value="submit">実行</button>
 </form>
+{% if img_data %}
+<img src="data:image/png:base64,{{ img_data }}"/>
+{% endif %}
 </body>
 </html>
