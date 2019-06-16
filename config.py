@@ -8,7 +8,7 @@ class DataBaseConfig():
     #postgreSQL データベース名
     SQL_DATABASE_NAME = 'LoveLive_music'
     #postgreSQL パスワード
-    SQL_DATABASE_PASS = 'll6030'
+    SQL_DATABASE_PASS = 'll0630'
     #postgreSQL パスワード
     SQL_DATABASE_PORT = '5432'
     #postgreSQL ホスト

@@ -28,8 +28,8 @@ class Plot:
         data = buf.getvalue()
 
         #試験用
-        with PostgreDAO.get_connection():
-        #    rows = PostgresDAO.select_data()
+        with PostgreDAO.get_connection(' user=postgres dbname= LoveLive_music password= ll0630 port= 5432 host= localhost'):
+            #rows = PostgreDAO.select_data()
             afafa = ''
         #base64エンコードしてhtmlに引き渡す
         responce = parse.quote(data)

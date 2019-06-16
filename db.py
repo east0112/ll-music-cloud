@@ -9,17 +9,15 @@ class PostgreDAO:
     #PostgreSQL接続クラス
 
     #postgreSQL connect関数
-    def get_connection():
+    def get_connection(strCon):
 
         user =  GetConfig.get_config('DataBaseConfig','SQL_DATABASE_USER')
         dbname =  GetConfig.get_config('DataBaseConfig','SQL_DATABASE_NAME')
         password =  GetConfig.get_config('DataBaseConfig','SQL_DATABASE_PASS')
         port =  GetConfig.get_config('DataBaseConfig','SQL_DATABASE_PORT')
         host =  GetConfig.get_config('DataBaseConfig','SQL_DATABASE_HOST')
-        strCon = ' user=' + user + ' dbname= ' + dbname + ' password= ' + password + ' port= ' + port + ' host= ' + host
-        #strCon = " user=postgres dbname= LoveLive_music password= ll0630 port= 5432 host= localhost"
-        return psycopg2.connect(strCon)
-
+        strCon = ' user={0} dbname={1} password={2} port={3} host={4}'
+        return psycopg2.connect(strCon.format(user,dbname,password,port,host))
 
     #postgreSQL select関数
     def select_data():
