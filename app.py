@@ -14,4 +14,7 @@ app.register_blueprint(lyriccloud, url_prefix='/lyriccloud')
 
 #print(app.config['SQL_DATABASE_USER'])
 #app.run(host="localhost",debug=True)
-app.run(host='0.0.0.0',debug=True)
+#app.run(host='0.0.0.0',debug=True)
+
+if __name__ == "__main__":
+    app.run()
