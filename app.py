@@ -2,11 +2,11 @@ import os
 from flask import Flask
 
 # Flask の起動
-app = Flask(__name__)
-app.config.from_object("config.DataBaseConfig")
+application = Flask(__name__)
+application.config.from_object("config.DataBaseConfig")
 
 from lyriccloud.views import lyriccloud
-app.register_blueprint(lyriccloud, url_prefix='/lyriccloud')
+application.register_blueprint(lyriccloud, url_prefix='/lyriccloud')
 
 ## ルートにアクセスしたときに実行される関数
 #@app.route('/')
@@ -19,4 +19,4 @@ app.register_blueprint(lyriccloud, url_prefix='/lyriccloud')
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0',port=port)
+    application.run(host='0.0.0.0',port=port)
