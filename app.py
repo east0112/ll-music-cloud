@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 
 # Flask の起動
@@ -17,4 +18,5 @@ app.register_blueprint(lyriccloud, url_prefix='/lyriccloud')
 #app.run(host='0.0.0.0',debug=True)
 
 if __name__ == "__main__":
-    app.run()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0',port=port)
