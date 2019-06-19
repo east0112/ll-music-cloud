@@ -1,5 +1,7 @@
 import requests
 import matplotlib
+import io
+import matplotlib.pyplot as plt
 matplotlib.use('Agg')
 from bs4 import BeautifulSoup
 from flask import Flask, make_response
@@ -8,14 +10,12 @@ from common import GetConfig
 from db import PostgreDAO
 from wordcloud import WordCloud
 from janome.tokenizer import Tokenizer
+from matplotlib.backends.backend_agg import FigureCanvasAgg
 
 class Plot:
     #入力の条件を基に、ワードクラウドを生成する。
     #base64でエンコードして画像情報をフロントへ返す
     def get_pic(group,unit):
-        import matplotlib.pyplot as plt
-        from matplotlib.backends.backend_agg import FigureCanvasAgg
-        import io
 
         #戻り値
         data = ''
