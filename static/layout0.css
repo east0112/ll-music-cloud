@@ -1,0 +1,91 @@
+/*ヘッダーの余白消去*/
+body{
+ margin:0;
+}
+#title{
+ margin:0;
+}
+
+/*ヘッダー*/
+.site-header {
+  background-color: #FF0099;   /* 背景色指定 */
+  paddinf:1px;  /*ヘッダーの余白消去*/
+  height: 45px;
+  color: #FFFFFF;
+  font-size: 30px;
+}
+
+.site-header a{
+	text-decoration: none ; /*下線無効*/
+  color: #FFFFFF;
+  font-family: 'Avenir','arial black',sans-serif;
+}
+.site-header a:visited{
+  text-decoration: none ; /*下線無効*/
+  color: #FFFFFF;
+  font-family: 'Avenir','arial black',sans-serif;
+}
+
+.link-box{
+  float: right;
+  width: 130px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 45px;
+}
+
+.link-button {
+  position: relative;
+  display: inline-block;
+  /*padding: 0.25em 0.5em;*/
+  text-decoration: none;
+  color: #00BCD4;
+  transition: .4s; /*モーション時間*/
+  width: 130px;
+}
+
+.link-button:hover {
+  background: #CC0066;
+  color: white;
+}
+.title-box{
+  float: left;
+  clear:both; /*回り込み防止*/
+}
+
+/*ヘッダーリンク*/
+.hearder-link {
+  display: inline-block;
+  background-color: #FFFFFF;   /* 背景色指定 */
+  height: 40px
+}
+
+/*ヘッダーボーダー*/
+.hearder-border {
+  height: 5px
+}
+
+/*背景設定*/
+body {
+  background-color: #FFFFFF;
+  background-image: url("bg.png"); /*背景画像指定*/
+  /*background-size: cover; /*背景画像の全体表示*/
+  background-attachment: fixed;
+	background-position: center top;
+  background-repeat: no-repeat; /*背景画像の並び指定*/
+}
+
+/*メインコンテンツ*/
+.body-back {
+  width: 1000;
+  box-shadow:0.5px 0.5px 2px;
+  border-radius: 5px;	/* ボックスの四つ角を丸くする */
+  background-color: #FFFFFF;
+  margin:0 auto  /* 中央寄せ */
+}
+
+/*余白作成用*/
+.body-content{
+  width: 950;
+  margin:0 auto  /* 中央寄せ */
+}
