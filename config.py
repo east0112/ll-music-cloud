@@ -14,3 +14,6 @@ class DataBaseConfig():
     #postgreSQL ホスト
     SQL_DATABASE_HOST = 'localhost'
 #-------------lyricCloud-------------
+class LyricConfig():
+    #フォントファイルパス
+    PATH_LYRIC_FONT = 'irohamaru-Regular.ttf'

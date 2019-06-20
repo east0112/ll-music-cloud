@@ -78,7 +78,7 @@ body {
 /*メインコンテンツ*/
 .body-back {
   width: 1000;
-  box-shadow:1px 1px 5px;
+  box-shadow:0.5px 0.5px 2px;
   border-radius: 5px;	/* ボックスの四つ角を丸くする */
   background-color: #FFFFFF;
   margin:0 auto  /* 中央寄せ */
